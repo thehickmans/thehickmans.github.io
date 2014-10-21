@@ -7,13 +7,9 @@
 </head>
 <body>
 <script>
-(function() {
-  var translinkAPI = "http://api.translink.ca/rttiapi/v1/stops/54275/estimates?apikey=T3uugFfjAmhQM96jocfV&routeNo=230&count=1";
-  $.getJSON( translinkAPI )
-    .done(function( data ) {
-      console.log ( data );
-    });
-})();
+  $.get( "http://api.translink.ca/rttiapi/v1/stops/54275/estimates?apikey=T3uugFfjAmhQM96jocfV&routeNo=230&count=1", function( data ) {
+  alert( "Data Loaded: " + data );
+});
 </script>
  
 </body>
