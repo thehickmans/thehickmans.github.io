@@ -1,1 +1,20 @@
-Hello World!
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>messing around with translink data</title>
+  <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+</head>
+<body>
+<script>
+(function() {
+  var translinkAPI = "http://api.translink.ca/rttiapi/v1/stops/54275/estimates?apikey=T3uugFfjAmhQM96jocfV&routeNo=230&count=1";
+  $.getJSON( translinkAPI )
+    .done(function( data ) {
+      console.log ( data );
+    });
+})();
+</script>
+ 
+</body>
+</html>
